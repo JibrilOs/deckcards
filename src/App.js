@@ -2,24 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//data structures
+  const values = Array.from({ length: 52 }, (_, i) => i + 1);
+  const suits = ["HEARTS", "DIAMONDS","CLUBS", "SPADES", ];
+  
+  
+  //creates deck
+  function createDeck() {
+    return values.reduce(
+      (c, v) => [...c, ...suits.map((s) => ({ value: v, suit: s }))],
+      []
+    );
+  }
+
+  return <div className="App">{console.log(createDeck())}</div>;
 }
 
 export default App;
