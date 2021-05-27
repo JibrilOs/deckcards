@@ -20,14 +20,14 @@ function App() {
      const val  =  createDeck();;
      return val.map((c,id)  =>  {
       
-     return <ul key={id}>
-     
-       <li>
-         {c.value}
-         {c.suit}
-       </li>
-   
-     </ul>;
+     return (
+       <ul key={id}>
+         <li>
+           {`${c.value} of
+           ${c.suit}`}
+         </li>
+       </ul>
+     );
     });;
   }
 
