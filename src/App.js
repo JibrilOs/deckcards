@@ -1,9 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   //data structures
-  const values = Array.from({ length: 52 }, (_, i) => i + 1);
+  const values = [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "JACK",
+    "QUEEN",
+    "KING",
+    "ACE",
+  ];
   const suits = ["HEARTS", "DIAMONDS", "CLUBS", "SPADES"];
   const PictureCard = { Jack: 11, Queen: 12, King: 13, Ace: 1, Deuces: 2 };
   const clonedeck = [...createDeck()];
