@@ -30,6 +30,10 @@ function App() {
     });;
   }
 
+  function shuffleDeck(deck) {
+    // Shuffle logic. Make sure you aren't mutating deck.
+  }
+
   return <div className="App">{printContent()}</div>;
 }
 
