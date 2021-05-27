@@ -5,7 +5,8 @@ function App() {
   //data structures
   const values = Array.from({ length: 52 }, (_, i) => i + 1);
   const suits = ["HEARTS", "DIAMONDS", "CLUBS", "SPADES"];
-   const PictureCard = { Jack: 11, Queen: 12, King: 13, Ace: 1, Deuces: 2 };
+  const PictureCard = { Jack: 11, Queen: 12, King: 13, Ace: 1, Deuces: 2 };
+  const clonedeck = [...createDeck()];
 
   //creates deck
   function createDeck() {
@@ -17,26 +18,31 @@ function App() {
 
   //prints content of deckcard
   function printContent() {
-     const val  =  createDeck();;
-     return val.map((c,id)  =>  {
-      
-     return (
-       <ul key={id}>
-         <li>
-           {`${c.value} of
+    const val = createDeck();
+    return val.map((c, id) => {
+      return (
+        <ul key={id}>
+          <li>
+            {`${c.value} of
            ${c.suit}`}
-         </li>
-       </ul>
-     );
-    });;
+          </li>
+        </ul>
+      );
+    });
   }
 
   function shuffleDeck(deck) {
     // Shuffle logic. Make sure you aren't mutating deck.
 
+    console.log(clonedeck);
   }
 
-  return <div className="App">{printContent()}</div>;
+  return (
+    <div className="App">
+      {printContent()}
+      {shuffleDeck()}
+    </div>
+  );
 }
 
 export default App;
