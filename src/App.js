@@ -5,6 +5,7 @@ function App() {
   //data structures
   const values = Array.from({ length: 52 }, (_, i) => i + 1);
   const suits = ["HEARTS", "DIAMONDS", "CLUBS", "SPADES"];
+   const PictureCard = { Jack: 11, Queen: 12, King: 13, Ace: 1, Deuces: 2 };
 
   //creates deck
   function createDeck() {
@@ -32,6 +33,7 @@ function App() {
 
   function shuffleDeck(deck) {
     // Shuffle logic. Make sure you aren't mutating deck.
+
   }
 
   return <div className="App">{printContent()}</div>;
